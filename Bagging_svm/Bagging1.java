@@ -1,4 +1,4 @@
-class Bagging extends Configured implements  Tool{
+class Bagging1 extends Configured implements  Tool{
     public int run(String[] args) throws Exception {
       Job baggingJob = Job.getInstance(this.getConf(),"Bagging SVM: Base models training");
       baggingJob.setJarByClass(this.getClass());
