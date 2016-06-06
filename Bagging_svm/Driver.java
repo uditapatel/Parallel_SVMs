@@ -49,13 +49,13 @@ public class Bagging1  {
       Configuration[] prepartitionConfs = new Configuration[prepartitionJobCount];
       prepartitionConfs[0] = firstConf;
       prepartitionConfs[1] = new Configuration();
-      Precascade1 pre1=new Precascade1();
+      Prebagging1 pre1=new Prebagging1();
       int res1 = ToolRunner.run(prepartitionConfs[0],pre1, otherArgs); //## change the class.
       System.out.println("The mapper exited with : "+res1);
       prepartitionConfs[1].setInt("SUBSET_COUNT",(int)subsets);
       prepartitionConfs[1].setInt("TOTAL_RECORD_COUNT",
               (int)pre1.getJob().getCounters().findCounter("trainingDataStats","TOTAL_RECORD_COUNT").getValue());
-      Precascade2 pre2=new Precascade2();
+      Prebagging2 pre2=new Prebagging2();
       int res2= ToolRunner.run(prepartitionConfs[1],pre2,otherArgs);
       Configuration baggingJobConf = new Configuration();
       DistributedCache.addFileToClassPath( new Path("/user/cloudera/cascade/libsvm3.2.jar"), baggingJobConf);
