@@ -1,4 +1,4 @@
-class Precascade2 extends Configured implements Tool {
+class Prebagginge2 extends Configured implements Tool {
     private Job job;
 
     public int run(String[] args) throws Exception {
