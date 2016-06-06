@@ -31,8 +31,8 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.log4j.Logger;
 
-public class Cascade2  {
-    private static final Logger LOG = Logger.getLogger(Cascade2.class);
+public class Driver  {
+    private static final Logger LOG = Logger.getLogger(Driver.class);
 
     public static void main(String[] args) throws Exception {
 
